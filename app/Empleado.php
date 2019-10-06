@@ -16,7 +16,10 @@ class Empleado extends Model
         'emp_sexo',
         'emp_telefono',
         'emp_celular',
-        'emp_direccion',        
+        'emp_direccion',
+        'emp_distrito',
+        'emp_provincia',
+        'emp_departamento',         
         'emp_email',
 
     ];

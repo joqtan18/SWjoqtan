@@ -24,7 +24,7 @@
         <label id="mensaje" style="color: red;display: none;font-size: 12pt;">El numero de DNI no es valido.</label>
     </div>
 </div>
-<form action="{{url('recep')}}" method="POST" class="my-3">
+<form action="{{url('empleado')}}" method="POST" class="my-3">
     @method('POST')
     {{ csrf_field() }}
     <div class="row">
@@ -65,14 +65,14 @@
             </div>
         </div>
         <div class="col-xl-4 col-md-6">
-            <div class="form-group">
-                <label for="">Sexo *</label>
+        <div class="form-group col-md-7">
+        <label for="">Sexo</label>
                 <select name="emp_sexo" class="form-control" required>
                   <option value="" hidden>--- Seleccione ---</option>
-                  <option value="1" @if (old('emp_sexo') == "1") {{ 'selected' }} @endif>Femenino</option>
-                  <option value="2" @if (old('emp_sexo') == "2") {{ 'selected' }} @endif>Masculino</option>
+                  <option value="1" @if (old('emp_sexo') == "1") {{ 'selected' }} @endif>MASCULINO</option>
+                  <option value="2" @if (old('emp_sexo') == "2") {{ 'selected' }} @endif>FEMENINO</option>
                 </select>
-            </div>
+        </div>
         </div>
         <div class="col-xl-2 col-md-6">
             <div class="form-group">
@@ -83,13 +83,13 @@
         <div class="col-xl-2 col-md-6">
             <div class="form-group">
                 <label for="">Celular</label>
-                <input type="text" name="emp_telefono" class="form-control" maxlength="9" value="{{old('emp_telefono')}}" >
+                <input type="text" name="emp_celular" class="form-control" maxlength="9" value="{{old('emp_celular')}}" >
             </div>
         </div>
         <div class="col-xl-4 col-md-6">
             <div class="form-group">
                 <label for="">Direccion</label>
-                <input type="text" name="emp_telefono" class="form-control" maxlength="50" value="{{old('emp_telefono')}}" >
+                <input type="text" name="emp_direccion" class="form-control" maxlength="50" value="{{old('emp_direccion')}}" >
             </div>
         </div>        
         <div class="col-xl-4 col-md-6">

@@ -21,7 +21,8 @@ class EmpleadoController extends Controller
     
     public function create()
     {
-        return view('empleado.create');
+        $sexo = DB::table('sexo')->get();
+        return view('empleado.create',['sexo'=>$sexo]);
     }
 
     public function store(Request $request)
