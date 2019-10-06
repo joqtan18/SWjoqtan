@@ -2,7 +2,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-tittle">Información del Trabajador</h5>
+        <h5 class="modal-tittle">Información del Empleado</h5>
       </div>
       <div class="modal-body">
         <label class="form-control">ID: {{$emp->emp_id}}</label>

@@ -42,7 +42,7 @@
 
 		</table>
 		<div>
-			<input type="submit" name="" value="BUSCAR" class="btn btn-info">	
+			<button id="" class="btn btn-success"><i class="fa fa-search"></i> Buscar</button>	
 		</div>
 		
 		
