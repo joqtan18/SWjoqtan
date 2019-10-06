@@ -39,7 +39,7 @@
 
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('bienvenido')}}">
+                    <a class="nav-link" href="{{url('')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Bienvenido</span></a>
                 </li>
@@ -82,7 +82,7 @@
 
                 <!-- Nav Item - Charts -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('')}}">
+                    <a class="nav-link" href="{{url('empleado')}}">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Empleados</span></a>
                 </li>
