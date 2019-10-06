@@ -15,7 +15,8 @@ class EmpleadoController extends Controller
 
     public function index()
     {
-       $data = DB::table('empleado')->get(); 
+       $data = DB::table('empleado')->get();
+
        return view('empleado.index',['empleado'=>$data]);
     }
     public function create()
@@ -28,18 +29,20 @@ class EmpleadoController extends Controller
 
     }
 
-    public function show(Cliente $cliente)
+    public function show(Empleado $empleado)
     {
         //
     }
 
     public function edit($id)
     {
-    	return view('empleado.edit');
+
+        return view('empleado.edit');
     }
+
     public function update(Request $request, $id)
     {
-
+            
     }
 
     public function destroy(Request $request, $id)

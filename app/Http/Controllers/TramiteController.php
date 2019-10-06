@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DocumentoController extends Controller
+class TramiteController extends Controller
 {
     public function exportPdf()
     {
@@ -13,11 +13,11 @@ class DocumentoController extends Controller
 
     public function index()
     {
-        return view('documento.index');
+        return view('tramite.index');
     }
     public function create()
     {
-        return view('documento.create');
+        
     }
 
     public function store(Request $request)

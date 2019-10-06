@@ -26,11 +26,6 @@
                     <th>DNI</th>
                     <th>Apellidos</th>
                     <th>Nombres</th>
-                    <th>Sexo</th>
-                    <th>Telefono</th>
-                    <th>Celular</th>
-                    <th>Direccion</th>
-                    <th>Email</th>
                     <th>Opciones</th>
                 </thead>
                 <tbody>
@@ -40,12 +35,11 @@
                         <td>{{$emp->emp_dni}}</td>
                         <td>{{$emp->emp_apellidos}}</td>
                         <td>{{$emp->emp_nombres}}</td>
-                        <td>{{$emp->emp_sexo}}</td>
-                        <td>{{$emp->emp_telefono}}</td>
-                        <td>{{$emp->emp_celular}}</td>
-                        <td>{{$emp->emp_direccion}}</td>
-                        <td>{{$emp->emp_email}}</td>
-                        <td><a href="{{url('empleado/'.$emp->emp_id.'/edit')}}" class="btn btn-sm btn-warning">Editar</a></td>  
+                        <td>
+                          <a data-toggle="modal" data-target="#modal-info-{{$emp->emp_id}}" class="btn btn-secondary btn-sm" href="">Ver</a>
+                          @include('empleado.detalles')
+                          <a href="{{url('emp/'.$emp->emp_id.'/edit')}}" class="btn btn-warning btn-sm">Editar</a>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

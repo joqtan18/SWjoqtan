@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Sistema Web DREC</title>
-        <link rel="shortcut icon" href="{{asset('img/iconodrec.ico')}}">
+        <link rel="shortcut icon" href="{{asset('img/drecicono.ico')}}">
 
         <!-- Custom fonts for this template -->
         <link href="{{asset('plantilla/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
@@ -43,7 +43,8 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Bienvenido</span></a>
                 </li>
-
+               <!-- Divider -->
+                <hr class="sidebar-divider">
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
                   <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -64,16 +65,6 @@
                 <!-- Nav Item - Charts -->
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('')}}">
-                    <i class="fas fa-fw fa-money-bill-alt"></i>
-                    <span>Estado de Tramite</span></a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider">
-
-                <!-- Nav Item - Charts -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('')}}">
                     <i class="fas fa-fw fa-file-pdf"></i>
                     <span>Reportes</span></a>
                 </li>
@@ -86,7 +77,15 @@
                     <i class="fas fa-fw fa-book"></i>
                     <span>Empleados</span></a>
                 </li>
+               <!-- Divider -->
+                <hr class="sidebar-divider">
 
+                <!-- Nav Item - Charts -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url('tramite')}}">
+                    <i class="fas fa-fw fa-money-bill-alt"></i>
+                    <span>Seguimiento de Tramite</span></a>
+                </li>
                 <!-- Divider -->
                 <hr class="sidebar-divider">
 

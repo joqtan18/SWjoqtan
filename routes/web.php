@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::resource('documento','DocumentoController');
 Route::resource('empleado','EmpleadoController');
+Route::resource('tramite','TramiteController');
