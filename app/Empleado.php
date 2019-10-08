@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empleado extends Model
 {
-    protected $table = 'empleados';
+    protected $table = 'empleado';
     protected $primaryKey = 'emp_id';
     public $timestamps = false;
     protected $fillable = [

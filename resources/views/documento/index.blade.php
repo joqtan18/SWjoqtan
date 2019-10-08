@@ -22,14 +22,21 @@
         <div class="table-responsive">
             <table class="table table-hover table-bordered table-sm" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <th>  </th>
-                    <th>  </th>
-                    <th>  </th>
-                    <th>  </th>
-                    <th>  </th>
-                    <th>  </th>
+                    <th>ID</th>
+                    <th>Nombre Documento</th>
+                    <th>opciones</th>
                 </thead>
-
+                    <tbody>
+                    @foreach($documentos as $doc)
+                    <tr>
+                        <td>{{$doc->doc_id}}</td>
+                        <td>{{$doc->doc_nombre}}</td>
+                        <td>
+                          <a href="{{url('')}}" class="btn btn-warning btn-sm">Editar</a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
         </div>
     </div>

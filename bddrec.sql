@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-10-2019 a las 00:19:41
+-- Tiempo de generación: 08-10-2019 a las 19:58:59
 -- Versión del servidor: 10.1.35-MariaDB
 -- Versión de PHP: 7.2.9
 
@@ -39,7 +39,6 @@ CREATE TABLE `empleado` (
   `emp_direccion` varchar(150) NOT NULL,
   `emp_distrito` varchar(150) NOT NULL,
   `emp_provincia` varchar(150) NOT NULL,
-  `emp_departamento` varchar(150) NOT NULL,
   `emp_email` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -47,9 +46,12 @@ CREATE TABLE `empleado` (
 -- Volcado de datos para la tabla `empleado`
 --
 
-INSERT INTO `empleado` (`emp_id`, `emp_dni`, `emp_apellidos`, `emp_nombres`, `emp_sexo`, `emp_telefono`, `emp_celular`, `emp_direccion`, `emp_distrito`, `emp_provincia`, `emp_departamento`, `emp_email`) VALUES
-(1, 70327395, 'Rodriguez Richarte', 'Joseph Joqtan', 1, 5621118, 941160145, 'jr.Republica de haiti 196', '', '', '', 'Joqtan.jr@gmail.com'),
-(2, 25835104, 'richarte', 'salvador', 2, 7654321, 123456789, 'jrm.casd.', '', '', '', 'eli@gmail.com');
+INSERT INTO `empleado` (`emp_id`, `emp_dni`, `emp_apellidos`, `emp_nombres`, `emp_sexo`, `emp_telefono`, `emp_celular`, `emp_direccion`, `emp_distrito`, `emp_provincia`, `emp_email`) VALUES
+(1, 70327397, 'RODRIGUEZ RICHARTE', 'ZALETH ', 2, 2222222, 941160145, 'JR.REPUBLICA DE HAITI', 'CALLAO', 'CALLAO', 'CALLAO@GMAIL.COM'),
+(2, 70327395, 'RODRIGUEZ RICHARTE', 'JOSEPH JOQTAN', 2, 1160145, 941160145, 'mz p lt 16 villas de oquendo etapa II', 'CARMEN DE LA LEGUA-REYNOSO', 'CALLAO', 'joqtan.jr@gmail.com'),
+(4, 43323864, 'RODRIGUEZ PINCHE', 'JOSE ORLANDO', 1, 1160145, 941160145, 'mz p lt 16 villas de oquendo etapa II', 'CARMEN DE LA LEGUA-REYNOSO', 'CALLAO', 'joqtan.jr@gmail.com'),
+(5, 25835104, 'RICHARTE SALVADOR', 'ELIZABETH', 1, 1160145, 941160145, 'mz p lt 16 villas de oquendo etapa II', 'CARMEN DE LA LEGUA-REYNOSO', 'CALLAO', 'joqtan.jr@gmail.com'),
+(6, 70327391, 'LLANTOY CLAPEZ', 'MORONI RICHARD', 1, 1160145, 941160145, 'mz p lt 16 villas de oquendo etapa II', 'CARMEN DE LA LEGUA-REYNOSO', 'CALLAO', 'joqtan.jr@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -96,23 +98,23 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `empleado`
 --
 ALTER TABLE `empleado`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `sexo`
 --
 ALTER TABLE `sexo`
-  MODIFY `sexo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `sexo_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `sexo`
+-- Filtros para la tabla `empleado`
 --
-ALTER TABLE `sexo`
-  ADD CONSTRAINT `sexo_ibfk_1` FOREIGN KEY (`sexo_id`) REFERENCES `empleado` (`emp_sexo`);
+ALTER TABLE `empleado`
+  ADD CONSTRAINT `empleado_ibfk_1` FOREIGN KEY (`emp_sexo`) REFERENCES `sexo` (`sexo_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Documentos;
 use Illuminate\Http\Request;
+use DB;
 
 class DocumentoController extends Controller
 {
@@ -13,7 +15,8 @@ class DocumentoController extends Controller
 
     public function index()
     {
-        return view('documento.index');
+        $data = DB::table('documentos')->get();
+        return view('documento.index',['documentos'=>$data]);
     }
     public function create()
     {
@@ -22,7 +25,9 @@ class DocumentoController extends Controller
 
     public function store(Request $request)
     {
-
+        $data = $request->all();
+        $documento = Documentos::create($data);
+        return redirect()->route('documento.index')->with('status', 'Documento agregado correctamente!');
     }
 
     public function show(Cliente $cliente)

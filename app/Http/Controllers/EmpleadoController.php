@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Empleado;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use DB;
 
 class EmpleadoController extends Controller
@@ -13,7 +14,7 @@ class EmpleadoController extends Controller
 
     }
 
-    public function index()
+    public function index(Request $request)
     {
        $data = DB::table('empleado')->get();
        return view('empleado.index',['empleado'=>$data]);
@@ -27,7 +28,9 @@ class EmpleadoController extends Controller
 
     public function store(Request $request)
     {
-
+        $data = $request->all();
+        $empleado = Empleado::create($data);
+        return redirect()->route('empleado.index')->with('status', 'Empleado agregado correctamente!');
     }
 
     public function show(Empleado $empleado)

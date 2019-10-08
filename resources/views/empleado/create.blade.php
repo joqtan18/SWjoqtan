@@ -46,6 +46,16 @@
                 <input type="text" name="emp_nombres" id="txtnombres" class="form-control" maxlength="50" required style="text-transform:uppercase;" value="{{old('emp_nombres')}}" readonly>
             </div>
         </div>
+        <div class="col-xl-3 col-md-6">
+            <div class="form-group">
+                <label for="">Sexo *</label>
+                <select name="emp_sexo" class="form-control" required>
+                  <option value="" hidden>--- Seleccione ---</option>
+                  <option value="1" @if (old('emp_sexo') == "1") {{ 'selected' }} @endif>MASCULINO</option>
+                  <option value="2" @if (old('emp_sexo') == "2") {{ 'selected' }} @endif>FEMENINO</option>
+                </select>
+            </div>
+        </div>
         <div class="col-xl-4 col-md-6">
             <div class="form-group">
                 <label for="">Distrito</label>
@@ -60,42 +70,26 @@
         </div>
         <div class="col-xl-2 col-md-6">
             <div class="form-group">
-                <label for="">Departamento</label>
-                <input type="text" name="emp_departamento" id="txtdepartamento" class="form-control" maxlength="13" value="{{old('emp_departamento')}}" readonly>
-            </div>
-        </div>
-        <div class="col-xl-4 col-md-6">
-        <div class="form-group col-md-7">
-        <label for="">Sexo</label>
-                <select name="emp_sexo" class="form-control" required>
-                  <option value="" hidden>--- Seleccione ---</option>
-                  <option value="1" @if (old('emp_sexo') == "1") {{ 'selected' }} @endif>MASCULINO</option>
-                  <option value="2" @if (old('emp_sexo') == "2") {{ 'selected' }} @endif>FEMENINO</option>
-                </select>
-        </div>
-        </div>
-        <div class="col-xl-2 col-md-6">
-            <div class="form-group">
                 <label for="">Teléfono</label>
-                <input type="text" name="emp_telefono" class="form-control" maxlength="7" value="{{old('emp_telefono')}}" >
+                <input type="text" name="emp_telefono" class="form-control" maxlength="7">
             </div>
         </div>
         <div class="col-xl-2 col-md-6">
             <div class="form-group">
                 <label for="">Celular</label>
-                <input type="text" name="emp_celular" class="form-control" maxlength="9" value="{{old('emp_celular')}}" >
+                <input type="text" name="emp_celular" class="form-control" maxlength="9" >
             </div>
         </div>
         <div class="col-xl-4 col-md-6">
             <div class="form-group">
                 <label for="">Direccion</label>
-                <input type="text" name="emp_direccion" class="form-control" maxlength="50" value="{{old('emp_direccion')}}" >
+                <input type="text" name="emp_direccion" class="form-control" maxlength="50">
             </div>
         </div>        
         <div class="col-xl-4 col-md-6">
             <div class="form-group">
                 <label for="">E-mail</label>
-                <input type="email" name="emp_email" class="form-control" maxlength="50" value="{{old('emp_email')}}" >
+                <input type="email" name="emp_email" class="form-control" maxlength="50" >
             </div>
         </div>
         <div class="col-xl-12 my-4">
@@ -103,6 +97,11 @@
                 <input type="submit" value="Registrar" class="btn btn-primary">
                 <a href="{{url('empleado')}}" class="btn btn-danger">Cancelar</a>
             </div>
+        </div>
+        <div>
+            S
+            NOTA: Completar todos los campos
+
         </div>
     </div>
 </form>
@@ -127,15 +126,13 @@
                             $('#txtgrupo').val(data.grupovota);
                             $('#txtdistrito').val(data.distrito);
                             $('#txtprovincia').val(data.provincia);
-                            $('#txtdepartamento').val(data.departamento);
                         }else{
                             $('#txtdni').val('');
                             $('#txtnombres').val('');
                             $('#txtapellidos').val('');
                             $('#txtgrupo').val('');
                             $('#txtdistrito').val('');
-                            $('#txtprovincia').val('');
-                            $('#txtdepartamento').val('');                            
+                            $('#txtprovincia').val('');                          
                             $('#mensaje').show();
                             $('#mensaje').delay(2000).hide(2500);
                         }

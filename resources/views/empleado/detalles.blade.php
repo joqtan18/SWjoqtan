@@ -11,11 +11,11 @@
         <label class="form-control">Nombres: {{$emp->emp_nombres}}</label>
         <label class="form-control">Distrito: {{$emp->emp_distrito}}</label>
         <label class="form-control">Provincia: {{$emp->emp_provincia}}</label>
-        <label class="form-control">Departamento: {{$emp->emp_departamento}}</label>
         <label class="form-control">Teléfono: (01){{$emp->emp_telefono}}</label>
         <label class="form-control">Celular: (+51){{$emp->emp_celular}}</label>
         <label class="form-control">Direccion: {{$emp->emp_direccion}}</label>
         <label class="form-control">E-mail: {{$emp->emp_email}}</label>
+        <label class="form-control">Sexo: {{$emp->emp_sexo}}</label>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
